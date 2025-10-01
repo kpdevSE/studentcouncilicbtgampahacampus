@@ -158,36 +158,36 @@ const Home = () => {
             <Star className="w-4 h-4 mr-2" />
             Award Winning Organization
           </Badge>
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 gradient-text drop-shadow-lg">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 gradient-text drop-shadow-lg">
             ICBT Student Council
           </h1>
-          <p className="text-2xl md:text-3xl mb-8 opacity-95 drop-shadow">
+          <p className="text-xl sm:text-2xl md:text-3xl mb-8 opacity-95 drop-shadow">
             Empowering Students, Building Community
           </p>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto opacity-95 leading-relaxed drop-shadow mb-8">
+          <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto opacity-95 leading-relaxed drop-shadow mb-8 px-4">
             Join the most dynamic student organization at ICBT. We're not just
             about events – we're about creating lasting impact, fostering
             leadership, and building a community where every student thrives.
           </p>
 
           {/* Quick Actions */}
-          <div className="flex flex-wrap justify-center gap-4 mt-8">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-8 px-4">
             <Button
-              className="bg-white/20 hover:bg-white/30 text-white border-white/30 px-6 py-3 rounded-full"
+              className="bg-white/20 hover:bg-white/30 text-white border-white/30 px-4 md:px-6 py-2 md:py-3 rounded-full text-sm md:text-base"
               onClick={() => (window.location.href = "/past-events")}
             >
               <Calendar className="w-4 h-4 mr-2" />
               View Events
             </Button>
             <Button
-              className="bg-white/20 hover:bg-white/30 text-white border-white/30 px-6 py-3 rounded-full"
+              className="bg-white/20 hover:bg-white/30 text-white border-white/30 px-4 md:px-6 py-2 md:py-3 rounded-full text-sm md:text-base"
               onClick={() => (window.location.href = "/present-members")}
             >
               <Users className="w-4 h-4 mr-2" />
               Meet Team
             </Button>
             <Button
-              className="bg-white/20 hover:bg-white/30 text-white border-white/30 px-6 py-3 rounded-full"
+              className="bg-white/20 hover:bg-white/30 text-white border-white/30 px-4 md:px-6 py-2 md:py-3 rounded-full text-sm md:text-base"
               onClick={() => (window.location.href = "/upcoming-events")}
             >
               <Star className="w-4 h-4 mr-2" />
@@ -208,7 +208,7 @@ const Home = () => {
               Making a difference, one student at a time
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {stats.map((stat, index) => (
               <Card
                 key={index}
@@ -230,10 +230,10 @@ const Home = () => {
       {/* About Section */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mb-20">
             <div>
               <Badge className="mb-4 bg-blue-100 text-blue-800">About Us</Badge>
-              <h2 className="text-5xl font-bold text-gray-800 mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-6">
                 What is the Student Council?
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed mb-6">
@@ -278,7 +278,7 @@ const Home = () => {
           </div>
 
           {/* Core Services */}
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-20">
             <Card className="modern-card hover:scale-105 transition-all duration-300 group">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -370,7 +370,7 @@ const Home = () => {
               Real experiences from our amazing community
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {testimonials.map((testimonial, index) => (
               <Card
                 key={index}
@@ -423,7 +423,7 @@ const Home = () => {
               Modern tools and features designed for student success
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {features.map((feature, index) => (
               <Card
                 key={index}
@@ -455,10 +455,10 @@ const Home = () => {
               Join our community and be part of something amazing. Explore our
               platform and discover all the opportunities waiting for you.
             </p>
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 md:gap-6">
               <Button
                 size="lg"
-                className="bg-blue-600 hover:bg-blue-700 px-8 py-4 text-lg"
+                className="bg-blue-600 hover:bg-blue-700 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg"
                 onClick={() => (window.location.href = "/past-events")}
               >
                 <Calendar className="w-5 h-5 mr-2" />
@@ -467,7 +467,7 @@ const Home = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg"
+                className="border-blue-600 text-blue-600 hover:bg-blue-50 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg"
                 onClick={() => (window.location.href = "/present-members")}
               >
                 <Users className="w-5 h-5 mr-2" />
@@ -534,7 +534,7 @@ const Home = () => {
               Explore our platform and discover all the amazing features
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             <Card className="modern-card hover:scale-105 transition-all duration-300 group cursor-pointer">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">

@@ -286,10 +286,10 @@ const PastMembers = () => {
               <Trophy className="w-4 h-4 mr-2" />
               Alumni Leadership
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
               Past Council Members
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl opacity-90 max-w-3xl mx-auto px-4">
               Honoring the dedicated leaders who shaped our student community
               and left a lasting legacy
             </p>
@@ -300,27 +300,27 @@ const PastMembers = () => {
       <div className="max-w-7xl mx-auto px-4 py-16">
         {/* Search and Filter Section */}
         <div className="mb-12">
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-            <div className="flex-1 max-w-md">
+          <div className="flex flex-col gap-4">
+            <div className="w-full max-w-md mx-auto md:mx-0">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                 <Input
                   placeholder="Search members..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10"
+                  className="pl-10 w-full"
                 />
               </div>
             </div>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2 justify-center md:justify-start">
               {categories.map((category) => (
                 <Button
                   key={category}
                   variant={filterCategory === category ? "default" : "outline"}
                   onClick={() => setFilterCategory(category)}
-                  className="whitespace-nowrap"
+                  className="whitespace-nowrap text-sm px-3 py-2"
                 >
-                  <Filter className="w-4 h-4 mr-2" />
+                  <Filter className="w-3 h-3 mr-1" />
                   {category}
                 </Button>
               ))}
@@ -329,7 +329,7 @@ const PastMembers = () => {
         </div>
 
         {/* Statistics Section */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16">
           <Card className="modern-card text-center">
             <CardContent className="p-6">
               <div className="text-3xl font-bold text-blue-600 mb-2">
@@ -373,7 +373,7 @@ const PastMembers = () => {
                 Executive Team
               </h2>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {executiveMembers.map((member, idx) => (
                 <Card
                   key={idx}
@@ -452,16 +452,6 @@ const PastMembers = () => {
                             </Badge>
                           ))}
                       </div>
-                      <div className="flex space-x-2 pt-2">
-                        <Button size="sm" variant="outline" className="flex-1">
-                          <Mail className="w-4 h-4 mr-1" />
-                          Contact
-                        </Button>
-                        <Button size="sm" variant="outline" className="flex-1">
-                          <Linkedin className="w-4 h-4 mr-1" />
-                          Connect
-                        </Button>
-                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -479,7 +469,7 @@ const PastMembers = () => {
                 Department Heads
               </h2>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {departmentHeads.map((member, idx) => (
                 <Card
                   key={idx}

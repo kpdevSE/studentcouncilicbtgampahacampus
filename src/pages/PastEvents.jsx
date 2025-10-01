@@ -254,7 +254,7 @@ const PastEvents = () => {
             <Calendar className="w-8 h-8 text-blue-600 mr-3" />
             <h2 className="text-3xl font-bold text-gray-800">Events</h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {sortedEvents.map((event) => (
               <Card
                 key={event.id}

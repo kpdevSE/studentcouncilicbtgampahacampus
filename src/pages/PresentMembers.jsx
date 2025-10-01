@@ -233,10 +233,10 @@ const PresentMembers = () => {
               <Users className="w-4 h-4 mr-2" />
               Leadership Team
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
               Present Council Members
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl opacity-90 max-w-3xl mx-auto px-4">
               Meet the dedicated leaders who are shaping the future of our
               student community
             </p>
@@ -251,7 +251,7 @@ const PresentMembers = () => {
             <Award className="w-8 h-8 text-yellow-500 mr-3" />
             <h2 className="text-3xl font-bold text-gray-800">Executive Team</h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {presentMembers
               .filter((member) => member.category === "Executive")
               .map((member, idx) => (
@@ -326,16 +326,6 @@ const PresentMembers = () => {
                             </Badge>
                           ))}
                       </div>
-                      <div className="flex space-x-2 pt-2">
-                        <Button size="sm" variant="outline" className="flex-1">
-                          <Mail className="w-4 h-4 mr-1" />
-                          Contact
-                        </Button>
-                        <Button size="sm" variant="outline" className="flex-1">
-                          <Linkedin className="w-4 h-4 mr-1" />
-                          Connect
-                        </Button>
-                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -351,7 +341,7 @@ const PresentMembers = () => {
               Department Heads
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {presentMembers
               .filter((member) => member.category === "Department Head")
               .map((member, idx) => (
