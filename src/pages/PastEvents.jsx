@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Calendar, Users, MapPin, Clock, Star, Award, Eye } from "lucide-react";
 import {
@@ -41,7 +41,7 @@ const PastEvents = () => {
           import.meta.url
         ).href,
       ],
-      attendees: 350,
+      attendees: 150,
       rating: 4.8,
       category: "Cultural",
       highlights: ["Carols", "Dance", "Photo Booth", "Food Stalls"],
@@ -51,7 +51,7 @@ const PastEvents = () => {
       id: 2,
       title: "Cricket Match 2023",
       date: "August 15, 2023",
-      time: "9:00 AM - 5:00 PM",
+      time: "9:00 AM - 6:00 PM",
       venue: "College Grounds",
       location: "ICBT Campus, Gampaha",
       shortDesc:
@@ -68,7 +68,7 @@ const PastEvents = () => {
         new URL("../assets/2023 cricket match/runners up.jpg", import.meta.url)
           .href,
       ],
-      attendees: 500,
+      attendees: 120,
       rating: 4.6,
       category: "Sports",
       highlights: ["Trophies", "Team Spirit", "Cheer Squads", "Snacks"],
@@ -99,7 +99,7 @@ const PastEvents = () => {
           import.meta.url
         ).href,
       ],
-      attendees: 420,
+      attendees: 120,
       rating: 4.7,
       category: "Cultural",
       highlights: ["Gift Passing", "Dance", "Decorations", "Community"],
@@ -123,7 +123,7 @@ const PastEvents = () => {
         new URL("../assets/echo night 2024/dancingboys3.jpg", import.meta.url)
           .href,
       ],
-      attendees: 380,
+      attendees: 100,
       rating: 4.6,
       category: "Cultural",
       highlights: ["Live Music", "Dance Crews", "Lights & Sound", "Crowd"],
@@ -134,8 +134,8 @@ const PastEvents = () => {
       title: "Erabadu Mangalya 2024",
       date: "April 10, 2024",
       time: "9:00 AM - 3:00 PM",
-      venue: "Campus Grounds",
-      location: "ICBT Campus, Gampaha",
+      venue: "Playground",
+      location: "Urban Council, Gampaha",
       shortDesc:
         "Traditional Sinhala-Tamil New Year celebrations with games and culture.",
       fullDesc:
@@ -152,10 +152,15 @@ const PastEvents = () => {
         new URL("../assets/erabadu mangalya 2024/babare.jpg", import.meta.url)
           .href,
       ],
-      attendees: 600,
+      attendees: 150,
       rating: 4.9,
       category: "Cultural",
-      highlights: ["Kabaadi Nwa", "Announcing", "Food", "Games"],
+      highlights: [
+        "Oil Lamping",
+        "Awurudu Kumara",
+        "Traditional Games",
+        "Prizes",
+      ],
       featured: false,
     },
     {
@@ -164,7 +169,7 @@ const PastEvents = () => {
       date: "April 12, 2025",
       time: "9:00 AM - 4:00 PM",
       venue: "Playground",
-      location: "ICBT Campus, Gampaha",
+      location: "Sumedha School, Gampaha",
       shortDesc:
         "Sinhala and Tamil New Year festival with traditional competitions.",
       fullDesc:
@@ -183,18 +188,23 @@ const PastEvents = () => {
           import.meta.url
         ).href,
       ],
-      attendees: 550,
+      attendees: 150,
       rating: 4.8,
       category: "Cultural",
       highlights: [
-        "Banis Kanawa",
-        "Kiri Ituranawa",
+        "Oil Lamping",
+        "Awurudu Kumara",
         "Traditional Games",
         "Prizes",
       ],
       featured: false,
     },
   ];
+
+  // Ensure page starts at top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleEventClick = (event) => {
     setSelectedEvent(event);

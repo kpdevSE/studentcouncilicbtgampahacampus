@@ -99,7 +99,7 @@ const EventDetails = () => {
             Back to Events
           </Button>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="max-w-4xl mx-auto">
             <div>
               <Badge className="mb-4 bg-white/20 text-white border-white/30">
                 <Award className="w-4 h-4 mr-2" />
@@ -128,17 +128,6 @@ const EventDetails = () => {
                   <span>{event.rating || "N/A"} rating</span>
                 </div>
               </div>
-            </div>
-
-            <div className="relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <img
-                  src={event.images[0]}
-                  alt={event.title}
-                  className="w-full h-96 object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-white/20 rounded-full pulse-glow"></div>
             </div>
           </div>
         </div>
