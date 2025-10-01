@@ -410,16 +410,6 @@ const PresentMembers = () => {
                             </Badge>
                           ))}
                       </div>
-                      <div className="flex space-x-2 pt-2">
-                        <Button size="sm" variant="outline" className="flex-1">
-                          <Mail className="w-4 h-4 mr-1" />
-                          Contact
-                        </Button>
-                        <Button size="sm" variant="outline" className="flex-1">
-                          <Linkedin className="w-4 h-4 mr-1" />
-                          Connect
-                        </Button>
-                      </div>
                     </div>
                   </CardContent>
                 </Card>
