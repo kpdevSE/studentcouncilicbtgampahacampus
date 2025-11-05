@@ -19,6 +19,10 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
+import pansilu from "../assets/Present Members/pansilu.jpg";
+import ayodya from "../assets/Present Members/ayodya.jpg";
+import ayodyaHansani from "../assets/Present Members/ayodyanangi.jpg";
+import chatumi from "../assets/Present Members/chathumi.jpg";
 
 const PresentMembers = () => {
   const presentMembers = [
@@ -27,8 +31,7 @@ const PresentMembers = () => {
       position: "President",
       programme: "BSc Computer Science",
       year: "Final Year",
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400",
+      image: pansilu,
       email: "pansilu.rathanayake@icbt.edu",
       linkedin: "pansilu-rathanayake",
       twitter: "pansilu_r",
@@ -60,8 +63,7 @@ const PresentMembers = () => {
       position: "Secretary",
       programme: "BSc IT",
       year: "3rd Year",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+      image: chatumi,
       email: "chathumi.kriyesha@icbt.edu",
       linkedin: "chathumi-kriyesha",
       twitter: "chathumi_k",
@@ -90,8 +92,7 @@ const PresentMembers = () => {
       position: "Head of Operation",
       programme: "BSc Marketing",
       year: "3rd Year",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
+      image: ayodya,
       email: "ayodya.bandara@icbt.edu",
       linkedin: "ayodya-bandara",
       twitter: "ayodya_b",
@@ -101,12 +102,11 @@ const PresentMembers = () => {
       category: "Department Head",
     },
     {
-      name: "Ayodya",
+      name: "Ayodya Hansani",
       position: "Assistant Head of Operation",
       programme: "BSc Business",
       year: "2nd Year",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+      image: ayodyaHansani,
       email: "ayodya@icbt.edu",
       linkedin: "ayodya",
       twitter: "ayodya_a",
@@ -260,7 +260,7 @@ const PresentMembers = () => {
                   className="modern-card overflow-hidden hover:scale-105 transition-all duration-300 group"
                 >
                   <div className="relative">
-                    <div className="aspect-video overflow-hidden">
+                    <div className="aspect-[4/3] overflow-hidden">
                       <img
                         src={member.image}
                         alt={member.name}
@@ -350,7 +350,7 @@ const PresentMembers = () => {
                   className="modern-card overflow-hidden hover:scale-105 transition-all duration-300 group"
                 >
                   <div className="relative">
-                    <div className="aspect-video overflow-hidden">
+                    <div className="aspect-[4/3] overflow-hidden">
                       <img
                         src={member.image}
                         alt={member.name}
