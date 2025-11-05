@@ -199,6 +199,36 @@ const PastEvents = () => {
       ],
       featured: false,
     },
+    {
+      id: 7,
+      title: "ICBT Cricket Premier League 2025",
+      date: "September 14, 2025",
+      time: "9:00 AM - 6:00 PM",
+      venue: "Playground",
+      location: "Urban Council Playground, Gampaha",
+      shortDesc:
+        "Friendly inter-batch cricket tournament hosted by the Student Council.",
+      fullDesc:
+        "The ICBT Gampaha Student Council organized a spirited cricket tournament promoting teamwork and sportsmanship. Batches competed throughout the day with energetic support from the crowd.",
+      images: [
+        new URL("../assets/2025 cricket match/main image.jpg", import.meta.url)
+          .href,
+        new URL("../assets/2025 cricket match/image2.jpg", import.meta.url)
+          .href,
+        new URL("../assets/2025 cricket match/image 3.jpg", import.meta.url)
+          .href,
+      ],
+      attendees: 150,
+      rating: 4.8,
+      category: "Sports",
+      highlights: [
+        "Championship Trophy",
+        "Runners Up Trophy",
+        "Cricket Tournament",
+        "Prizes",
+      ],
+      featured: false,
+    },
   ];
 
   // Ensure page starts at top when component mounts

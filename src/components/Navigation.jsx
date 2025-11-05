@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import logo from "../assets/LOGOS/ICBT LOGO.jpg";
 
 const Navigation = () => {
   const location = useLocation();
@@ -22,9 +23,11 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl text-white flex items-center justify-center shadow-md group-hover:scale-105 transition">
-              <span className="font-bold text-lg">IC</span>
-            </div>
+            <img
+              src={logo}
+              alt="ICBT Logo"
+              className="w-10 h-10 rounded-2xl object-cover shadow-md group-hover:scale-105 transition"
+            />
             <span className="font-bold text-lg md:text-xl text-gray-900">
               ICBT Student Council
             </span>
@@ -98,9 +101,11 @@ const Navigation = () => {
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <div className="px-2 pt-6 pb-2 border-b">
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl text-white flex items-center justify-center">
-                    <span className="font-semibold">IC</span>
-                  </div>
+                  <img
+                    src={logo}
+                    alt="ICBT Logo"
+                    className="w-9 h-9 rounded-xl object-cover"
+                  />
                   <span className="font-semibold">ICBT Student Council</span>
                 </div>
               </div>

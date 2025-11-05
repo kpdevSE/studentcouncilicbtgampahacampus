@@ -162,6 +162,18 @@ const EventDetails = () => {
               </Card>
             ))}
           </div>
+
+          <a
+            rel="stylesheet"
+            href="https://www.facebook.com/share/1HHeve5HbX/?mibextid=wwXIfr "
+            target="_blank"
+            className="text-blue-500 hover:text-blue-600 "
+          >
+            <p className="text-blue-700 hover:text-blue-600 pt-10">
+              You can view all images in ICBT Gampaha Campus Official Facebook
+              Page Click Here .
+            </p>
+          </a>
         </div>
 
         {/* Event Details */}

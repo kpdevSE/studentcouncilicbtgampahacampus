@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Users,
   Award,
@@ -23,6 +23,8 @@ import pansilu from "../assets/Present Members/pansilu.jpg";
 import ayodya from "../assets/Present Members/ayodya.jpg";
 import ayodyaHansani from "../assets/Present Members/ayodyanangi.jpg";
 import chatumi from "../assets/Present Members/chathumi.jpg";
+import anjith from "../assets/Present Members/anjith.jpg";
+import chanux from "../assets/Present Members/chanux.jpg";
 
 const PresentMembers = () => {
   const presentMembers = [
@@ -48,8 +50,7 @@ const PresentMembers = () => {
       position: "Vice President",
       programme: "BSc Business Management",
       year: "Final Year",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400",
+      image: anjith,
       email: "anjith.kithmal@icbt.edu",
       linkedin: "anjith-kithmal",
       twitter: "anjith_k",
@@ -138,8 +139,7 @@ const PresentMembers = () => {
       position: "Assistant Head of Finance",
       programme: "BSc Accounting",
       year: "2nd Year",
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400",
+      image: chanux,
       email: "chanuka.weerasinghe@icbt.edu",
       linkedin: "chanuka-weerasinghe",
       twitter: "chanuka_w",
@@ -215,6 +215,10 @@ const PresentMembers = () => {
       category: "Department Head",
     },
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="pt-16 min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
