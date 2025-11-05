@@ -35,6 +35,7 @@ import {
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
+import lakshani from "../assets/review huys/laskhani new.jpg";
 
 const Home = () => {
   const stats = [
@@ -70,13 +71,12 @@ const Home = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Amasha Lakshani",
       role: "Computer Science Student",
       content:
-        "The Student Council has transformed my university experience. The events are amazing and the support is incredible!",
+        "As a senior student at ICBT, I’ve witnessed the remarkable impact of the Student Council on our campus community. It has continuously inspired leadership, collaboration, and innovation among students. The Council not only organizes meaningful events but also empowers us to develop essential skills and contribute positively to college life. Being part of this journey has truly enriched my ICBT experience.",
       rating: 5,
-      avatar:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+      avatar: lakshani,
     },
     {
       name: "Michael Chen",
