@@ -260,7 +260,7 @@ const PastMembers = () => {
   );
 
   return (
-    <div className="pt-16 min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="pt-16 min-h-screen bg-background">
       {/* Hero Section */}
       <div
         className="relative py-20 text-white overflow-hidden bg-center bg-cover"
@@ -282,14 +282,14 @@ const PastMembers = () => {
 
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center">
-            <Badge className="mb-6 bg-white/20 text-white border-white/30 hover:bg-white/30">
+            <Badge className="mb-6 bg-primary/20 text-primary border-primary/30 hover:bg-primary/30 backdrop-blur-sm">
               <Trophy className="w-4 h-4 mr-2" />
               Alumni Leadership
             </Badge>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
               Past Council Members
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl opacity-90 max-w-3xl mx-auto px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto px-4">
               Honoring the dedicated leaders who shaped our student community
               and left a lasting legacy
             </p>
@@ -332,34 +332,34 @@ const PastMembers = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16">
           <Card className="modern-card text-center">
             <CardContent className="p-6">
-              <div className="text-3xl font-bold text-blue-600 mb-2">
+              <div className="text-3xl font-bold text-primary mb-2">
                 {pastMembers.length}
               </div>
-              <div className="text-gray-600">Total Alumni</div>
+              <div className="text-muted-foreground">Total Alumni</div>
             </CardContent>
           </Card>
           <Card className="modern-card text-center">
             <CardContent className="p-6">
-              <div className="text-3xl font-bold text-green-600 mb-2">
+              <div className="text-3xl font-bold text-chart-2 mb-2">
                 {executiveMembers.length}
               </div>
-              <div className="text-gray-600">Executive Team</div>
+              <div className="text-muted-foreground">Executive Team</div>
             </CardContent>
           </Card>
           <Card className="modern-card text-center">
             <CardContent className="p-6">
-              <div className="text-3xl font-bold text-purple-600 mb-2">
+              <div className="text-3xl font-bold text-accent-foreground mb-2">
                 {departmentHeads.length}
               </div>
-              <div className="text-gray-600">Department Heads</div>
+              <div className="text-muted-foreground">Department Heads</div>
             </CardContent>
           </Card>
           <Card className="modern-card text-center">
             <CardContent className="p-6">
-              <div className="text-3xl font-bold text-orange-600 mb-2">
+              <div className="text-3xl font-bold text-chart-4 mb-2">
                 2023-2024
               </div>
-              <div className="text-gray-600">Academic Year</div>
+              <div className="text-muted-foreground">Academic Year</div>
             </CardContent>
           </Card>
         </div>
@@ -368,8 +368,8 @@ const PastMembers = () => {
         {executiveMembers.length > 0 && (
           <div className="mb-16">
             <div className="flex items-center mb-8">
-              <Award className="w-8 h-8 text-yellow-500 mr-3" />
-              <h2 className="text-3xl font-bold text-gray-800">
+              <Award className="w-8 h-8 text-yellow-400 mr-3" />
+              <h2 className="text-3xl font-bold text-foreground">
                 Executive Team
               </h2>
             </div>
@@ -394,7 +394,7 @@ const PastMembers = () => {
                       </Badge>
                     </div>
                     <div className="absolute top-4 right-4">
-                      <Badge variant="secondary" className="bg-white/90">
+                      <Badge variant="secondary" className="bg-card/90 backdrop-blur-sm">
                         {member.year}
                       </Badge>
                     </div>
@@ -411,7 +411,7 @@ const PastMembers = () => {
                         </AvatarFallback>
                       </Avatar>
                       <div>
-                        <CardTitle className="text-xl group-hover:text-blue-600 transition-colors">
+                        <CardTitle className="text-xl group-hover:text-primary transition-colors">
                           {member.name}
                         </CardTitle>
                         <Badge variant="secondary" className="mt-1">
@@ -464,8 +464,8 @@ const PastMembers = () => {
         {departmentHeads.length > 0 && (
           <div>
             <div className="flex items-center mb-8">
-              <Users className="w-8 h-8 text-blue-600 mr-3" />
-              <h2 className="text-3xl font-bold text-gray-800">
+              <Users className="w-8 h-8 text-primary mr-3" />
+              <h2 className="text-3xl font-bold text-foreground">
                 Department Heads
               </h2>
             </div>
@@ -484,7 +484,7 @@ const PastMembers = () => {
                       />
                     </div>
                     <div className="absolute top-4 right-4">
-                      <Badge variant="secondary" className="bg-white/90">
+                      <Badge variant="secondary" className="bg-card/90 backdrop-blur-sm">
                         {member.year}
                       </Badge>
                     </div>
@@ -501,7 +501,7 @@ const PastMembers = () => {
                         </AvatarFallback>
                       </Avatar>
                       <div>
-                        <CardTitle className="text-xl group-hover:text-blue-600 transition-colors">
+                        <CardTitle className="text-xl group-hover:text-primary transition-colors">
                           {member.name}
                         </CardTitle>
                         <Badge variant="secondary" className="mt-1">
@@ -546,17 +546,17 @@ const PastMembers = () => {
 
         {/* Legacy Section */}
         <div className="mt-20 text-center">
-          <Card className="modern-card bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+          <Card className="modern-card bg-gradient-to-r from-primary via-primary/90 to-accent-foreground text-primary-foreground">
             <CardContent className="p-12">
               <Trophy className="w-16 h-16 mx-auto mb-6 text-yellow-300" />
-              <h3 className="text-3xl font-bold mb-4">Their Legacy Lives On</h3>
-              <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              <h3 className="text-3xl font-bold mb-4 text-white">Their Legacy Lives On</h3>
+              <p className="text-xl opacity-90 max-w-3xl mx-auto text-white">
                 These dedicated leaders have left an indelible mark on our
                 student community. Their contributions continue to inspire and
                 guide the next generation of student leaders.
               </p>
               <div className="flex justify-center mt-8">
-                <Badge className="bg-white/20 text-white border-white/30 px-6 py-2">
+                <Badge className="bg-background/20 text-background border-background/30 px-6 py-2 backdrop-blur-sm text-white">
                   <Heart className="w-4 h-4 mr-2" />
                   Forever Grateful
                 </Badge>

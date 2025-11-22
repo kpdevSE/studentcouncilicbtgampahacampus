@@ -221,10 +221,10 @@ const PresentMembers = () => {
   }, []);
 
   return (
-    <div className="pt-16 min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="pt-16 min-h-screen bg-background">
       {/* Hero Section */}
-      <div className="relative py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <div className="relative py-20 bg-gradient-to-r from-primary via-primary/90 to-accent-foreground text-primary-foreground overflow-hidden">
+        <div className="absolute inset-0 bg-background/20"></div>
         <div className="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full float-animation"></div>
         <div
           className="absolute bottom-10 left-10 w-24 h-24 bg-white/5 rounded-full float-animation"
@@ -233,14 +233,14 @@ const PresentMembers = () => {
 
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center">
-            <Badge className="mb-6 bg-white/20 text-white border-white/30 hover:bg-white/30">
+            <Badge className="mb-6 bg-background/20 text-background border-background/30 hover:bg-background/30 backdrop-blur-sm">
               <Users className="w-4 h-4 mr-2" />
               Leadership Team
             </Badge>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
               Present Council Members
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl opacity-90 max-w-3xl mx-auto px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto px-4">
               Meet the dedicated leaders who are shaping the future of our
               student community
             </p>
@@ -252,8 +252,8 @@ const PresentMembers = () => {
         {/* Executive Team */}
         <div className="mb-16">
           <div className="flex items-center mb-8">
-            <Award className="w-8 h-8 text-yellow-500 mr-3" />
-            <h2 className="text-3xl font-bold text-gray-800">Executive Team</h2>
+            <Award className="w-8 h-8 text-yellow-400 mr-3" />
+            <h2 className="text-3xl font-bold text-foreground">Executive Team</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {presentMembers
@@ -340,8 +340,8 @@ const PresentMembers = () => {
         {/* Department Heads Team */}
         <div>
           <div className="flex items-center mb-8">
-            <Users className="w-8 h-8 text-blue-600 mr-3" />
-            <h2 className="text-3xl font-bold text-gray-800">
+            <Users className="w-8 h-8 text-primary mr-3" />
+            <h2 className="text-3xl font-bold text-foreground">
               Department Heads
             </h2>
           </div>

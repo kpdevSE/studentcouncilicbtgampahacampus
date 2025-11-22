@@ -32,7 +32,7 @@ const EventDetails = () => {
 
   if (!event) {
     return (
-      <div className="pt-16 min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="pt-16 min-h-screen bg-background flex items-center justify-center">
         <Card className="w-full max-w-md">
           <CardHeader className="text-center">
             <CardTitle>Event not found</CardTitle>
@@ -76,13 +76,13 @@ const EventDetails = () => {
   }, []);
 
   return (
-    <div className="pt-16 min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="pt-16 min-h-screen bg-background">
       {/* Hero Section */}
       <div
-        className="relative py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white overflow-hidden bg-center bg-cover"
+        className="relative py-20 bg-gradient-to-r from-primary via-primary/90 to-accent-foreground text-primary-foreground overflow-hidden bg-center bg-cover"
         style={{ backgroundImage: `url(${event.images && event.images[0]})` }}
       >
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-background/70"></div>
         <div className="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full float-animation"></div>
         <div
           className="absolute bottom-10 left-10 w-24 h-24 bg-white/5 rounded-full float-animation"
@@ -93,7 +93,7 @@ const EventDetails = () => {
           <Button
             variant="ghost"
             onClick={() => navigate("/past-events")}
-            className="mb-8 text-white hover:bg-white/20"
+            className="mb-8 text-primary-foreground hover:bg-background/20 text-white"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Events
@@ -101,29 +101,29 @@ const EventDetails = () => {
 
           <div className="max-w-4xl mx-auto">
             <div>
-              <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              <Badge className="mb-4 bg-background/20 text-background border-background/30 backdrop-blur-sm">
                 <Award className="w-4 h-4 mr-2" />
                 {event.category || "Event"}
               </Badge>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
                 {event.title}
               </h1>
-              <p className="text-xl opacity-90 mb-8">{event.shortDesc}</p>
+              <p className="text-xl text-primary-foreground/90 mb-8 text-white">{event.shortDesc}</p>
 
               <div className="flex flex-wrap gap-4 mb-8">
-                <div className="flex items-center space-x-2 bg-white/20 px-4 py-2 rounded-full">
+                <div className="flex items-center space-x-2 bg-background/20 px-4 py-2 rounded-full backdrop-blur-sm text-white">
                   <Calendar className="w-5 h-5" />
                   <span>{event.date}</span>
                 </div>
-                <div className="flex items-center space-x-2 bg-white/20 px-4 py-2 rounded-full">
+                <div className="flex items-center space-x-2 bg-background/20 px-4 py-2 rounded-full backdrop-blur-sm text-white">
                   <Clock className="w-5 h-5" />
                   <span>{event.time}</span>
                 </div>
-                <div className="flex items-center space-x-2 bg-white/20 px-4 py-2 rounded-full">
+                <div className="flex items-center space-x-2 bg-background/20 px-4 py-2 rounded-full backdrop-blur-sm text-white">
                   <Users className="w-5 h-5" />
                   <span>{event.attendees || "N/A"} attendees</span>
                 </div>
-                <div className="flex items-center space-x-2 bg-white/20 px-4 py-2 rounded-full">
+                <div className="flex items-center space-x-2 bg-background/20 px-4 py-2 rounded-full backdrop-blur-sm text-white">
                   <Star className="w-5 h-5" />
                   <span>{event.rating || "N/A"} rating</span>
                 </div>
@@ -136,7 +136,7 @@ const EventDetails = () => {
       <div className="max-w-6xl mx-auto px-4 py-16">
         {/* Event Gallery */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8">
+          <h2 className="text-3xl font-bold text-foreground mb-8">
             Event Gallery
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
@@ -150,7 +150,7 @@ const EventDetails = () => {
                 }}
               >
                 <div
-                  className="bg-white flex items-center justify-center"
+                  className="bg-card flex items-center justify-center"
                   style={{ height: "220px" }}
                 >
                   <img
@@ -163,13 +163,13 @@ const EventDetails = () => {
             ))}
           </div>
 
-          <a
+            <a
             rel="stylesheet"
             href="https://www.facebook.com/share/1HHeve5HbX/?mibextid=wwXIfr "
             target="_blank"
-            className="text-blue-500 hover:text-blue-600 "
+            className="text-primary hover:text-primary/80 "
           >
-            <p className="text-blue-700 hover:text-blue-600 pt-10">
+            <p className="text-primary hover:text-primary/80 pt-10">
               You can view all images in ICBT Gampaha Campus Official Facebook
               Page Click Here .
             </p>
@@ -206,9 +206,9 @@ const EventDetails = () => {
                       {event.highlights.map((highlight, idx) => (
                         <div
                           key={idx}
-                          className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg"
+                          className="flex items-center space-x-3 p-3 bg-primary/20 rounded-lg"
                         >
-                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                          <div className="w-2 h-2 bg-primary rounded-full"></div>
                           <span className="text-sm font-medium">
                             {highlight}
                           </span>
@@ -229,35 +229,35 @@ const EventDetails = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <Calendar className="w-5 h-5 text-blue-600" />
+                  <Calendar className="w-5 h-5 text-primary" />
                   <div>
                     <p className="text-sm text-muted-foreground">Date</p>
                     <p className="font-semibold">{event.date}</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Clock className="w-5 h-5 text-blue-600" />
+                  <Clock className="w-5 h-5 text-primary" />
                   <div>
                     <p className="text-sm text-muted-foreground">Time</p>
                     <p className="font-semibold">{event.time}</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-blue-600" />
+                  <MapPin className="w-5 h-5 text-primary" />
                   <div>
                     <p className="text-sm text-muted-foreground">Venue</p>
                     <p className="font-semibold">{event.venue}</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Users className="w-5 h-5 text-blue-600" />
+                  <Users className="w-5 h-5 text-primary" />
                   <div>
                     <p className="text-sm text-muted-foreground">Attendees</p>
                     <p className="font-semibold">{event.attendees || "N/A"}</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Star className="w-5 h-5 text-yellow-500" />
+                  <Star className="w-5 h-5 text-yellow-400" />
                   <div>
                     <p className="text-sm text-muted-foreground">Rating</p>
                     <p className="font-semibold">{event.rating || "N/A"}</p>
@@ -313,7 +313,7 @@ const EventDetails = () => {
         <button
           aria-label="Back to top"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-6 right-6 z-50 rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-white/50 px-4 py-3"
+          className="fixed bottom-6 right-6 z-50 rounded-full bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50 px-4 py-3"
         >
           ↑ Top
         </button>

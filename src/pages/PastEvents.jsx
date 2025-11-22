@@ -246,17 +246,17 @@ const PastEvents = () => {
   );
 
   return (
-    <div className="pt-16 min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="pt-16 min-h-screen bg-background">
       {/* Hero Section */}
       <div
-        className="relative py-20 text-white overflow-hidden bg-center bg-cover"
+        className="relative py-20 text-foreground overflow-hidden bg-center bg-cover"
         style={{
           backgroundImage: `url(${
             new URL("../assets/awareka mal image.jpg", import.meta.url).href
           })`,
         }}
       >
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-background/80"></div>
         <div className="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full float-animation"></div>
         <div
           className="absolute bottom-10 left-10 w-24 h-24 bg-white/5 rounded-full float-animation"
@@ -265,12 +265,12 @@ const PastEvents = () => {
 
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center">
-            <Badge className="mb-6 bg-white/20 text-white border-white/30 hover:bg-white/30">
+            <Badge className="mb-6 bg-primary/20 text-primary border-primary/30 hover:bg-primary/30 backdrop-blur-sm">
               <Award className="w-4 h-4 mr-2" />
               Past Events Archive
             </Badge>
             <h1 className="text-5xl md:text-7xl font-bold mb-6">Past Events</h1>
-            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
               Relive the amazing moments from our successful events that brought
               our community together
             </p>
@@ -281,8 +281,8 @@ const PastEvents = () => {
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div>
           <div className="flex items-center mb-8">
-            <Calendar className="w-8 h-8 text-blue-600 mr-3" />
-            <h2 className="text-3xl font-bold text-gray-800">Events</h2>
+            <Calendar className="w-8 h-8 text-primary mr-3" />
+            <h2 className="text-3xl font-bold text-foreground">Events</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {sortedEvents.map((event) => (
@@ -299,13 +299,13 @@ const PastEvents = () => {
                     />
                   </div>
                   <div className="absolute top-4 right-4">
-                    <Badge variant="secondary" className="bg-white/90">
+                    <Badge variant="secondary" className="bg-card/90 backdrop-blur-sm">
                       {event.category}
                     </Badge>
                   </div>
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-xl group-hover:text-blue-600 transition-colors">
+                  <CardTitle className="text-xl group-hover:text-primary transition-colors">
                     {event.title}
                   </CardTitle>
                   <div className="flex items-center space-x-4 text-sm text-muted-foreground">
@@ -337,7 +337,7 @@ const PastEvents = () => {
                   <Button
                     variant="outline"
                     onClick={() => handleEventClick(event)}
-                    className="w-full group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-colors"
+                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors"
                   >
                     <Eye className="w-4 h-4 mr-2" />
                     View Details
